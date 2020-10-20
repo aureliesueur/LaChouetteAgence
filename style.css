@@ -362,6 +362,21 @@ a:hover {
     z-index: 2;
 }
 
+/*Audit SEO : remplacement du texte intégré dans une image par un texte réel sous forme de citation. */
+blockquote p:nth-child(1) {
+    font-size: 1.2em;
+    font-style: italic;
+    width: 90%;
+    line-height: 25px;
+    margin-left: 20px;
+}
+
+blockquote p:nth-child(2) {
+    font-size: 0.9em;
+    margin-top: -10px;
+    text-align: center;
+}
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -707,6 +722,19 @@ p {
 h2 {
     font-size: 22px;
     line-height: 1.4em;
+}
+
+/*Audit SEO : remplacement du texte intégré dans une image par un véritable bloc de texte */
+#bloc-2-services h2 {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#bloc-4-portfolio h2 {
+    width: 45%;
+    margin: auto;
+    text-align: center;
 }
 
 h3 {
