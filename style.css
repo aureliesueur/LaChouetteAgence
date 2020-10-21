@@ -100,7 +100,7 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .d-bloc button:hover {
@@ -362,7 +362,7 @@ a:hover {
     z-index: 2;
 }
 
-/*Audit SEO : remplacement du texte intégré dans une image par un texte réel sous forme de citation. */
+/*Audit SEO/Accessibilité : remplacement du texte intégré dans une image par un texte réel sous forme de citation. */
 blockquote p:nth-child(1) {
     font-size: 1.2em;
     font-style: italic;
@@ -724,7 +724,7 @@ h2 {
     line-height: 1.4em;
 }
 
-/*Audit SEO : remplacement du texte intégré dans une image par un véritable bloc de texte */
+/*Audit SEO/Accessibilité : remplacement du texte intégré dans une image par un véritable bloc de texte */
 #bloc-2-services h2 {
     width: 60%;
     margin: auto;
@@ -736,6 +736,23 @@ h2 {
     margin: auto;
     text-align: center;
 }
+
+#bloc-5-cta {
+    position: relative;
+}
+
+#bloc-5-cta h2 {
+    display: block;
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 30%;
+}
+
+#bloc-5-cta .btn {
+    margin-top: 60px;
+}
+
 
 h3 {
     font-size: 15px;
@@ -781,8 +798,12 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(82, 73, 47, 0.7);
     padding: 40px 40px 40px 40px;
+}
+
+.black-background h2 {/* Audit SEO/Accessibilité : changement de la couleur du background pour augmenter le contraste jusqu'au niveau valide */
+    color: #fcb08c;
 }
 
 .bold-link {
@@ -802,17 +823,17 @@ h4 {
     background-color: #F3976C;
 }
 
-.tc-white {
-    color: #F3976C!important;
+.tc-white {/* Audit SEO/Accessibilité : changement de la couleur du texte pour augmenter le contraste  jusqu'au niveau valide */
+    color: #fcb08c!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #000!important;/*Audit SEO/Accessibilité : modification de la couleur du texte pour arriver à un contraste acceptable de niveau AA */
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+.btn-atomic-tangerine:hover {/*Audit SEO/Accessibilité : modification de la couleur du bkg pour arriver à un contraste acceptable de niveau AA */
+    background: #915A40!important;
     color: #FFFFFF!important;
 }
 
@@ -1067,4 +1088,79 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+/* Audit SEO/Accessibilité : mise en page du footer et renforcement du contraste pour atteindre un niveau acceptable */
+#bloc-8 p {
+    color: #000!important;
+    margin-bottom: 20px;
+}
+
+
+.listeliens h4 {
+    color: #000!important;
+    font-size: 1em;
+    background:#FAD5C4;
+    width: 60%;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: #DDD 1px 1px 3px;
+}
+
+.listeliens {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+.listeliens ul {
+    margin: 0;
+    padding: 0;
+}
+
+.listeliens ul li a {
+    color: #000!important;
+}
+
+/* Audit SEO/Accessibilité Page 2 : mise en visibilité du texte derrière le background, et renforcement du contraste pour atteindre un niveau acceptable */
+
+#bloc-6 {
+    height: 350px;
+    z-index: 1; 
+    padding-left: 0;
+}
+
+#bloc-6 h1 {
+    color: #000!important;
+    display: block;
+    z-index: 3;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#bloc-6 h2 {
+    color: #FFF!important;
+    display: block;
+    z-index: 3;
+    width: 70%;
+    font-size: 1.7em;
+    margin-top: 30px;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container.bloc-lg {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#address {
+    text-align: center;
+    margin-top: 40px;
 }
