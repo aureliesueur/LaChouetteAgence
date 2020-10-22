@@ -739,18 +739,19 @@ h2 {
 
 #bloc-5-cta {
     position: relative;
+    height: 350px;
 }
 
 #bloc-5-cta h2 {
     display: block;
     position: absolute;
     width: 40%;
-    top: 20%;
+    top: 30%;
     left: 30%;
 }
 
 #bloc-5-cta .btn {
-    margin-top: 60px;
+    margin-top: 150px;
 }
 
 

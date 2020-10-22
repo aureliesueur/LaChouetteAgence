@@ -85,32 +85,35 @@
 	<div class="container bloc-lg">
 		<div class="row" id="form-container">
 			<div class="col-sm-6">
-				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+				<form id="form_1" novalidate success-msg="Vos informations ont bien été envoyées." fail-msg="Notre serveur de messagerie semble avoir un disfonctionnement temporaire, nous sommes désolés pour ce désagrément !" method="post" action="">
 					<div class="form-group">
-						<label>
-							Nom
-						</label>
-						<input id="name" class="form-control" required />
+						<label for="name">Nom</label>
+						<input type="text" name="name" id="name" class="form-control" placeholder="Par exemple : Martin" required />
+					</div>
+                    <div class="form-group">
+						<label for="firstname">Prénom</label>
+						<input type="text" name="firstname" id="firstname" class="form-control" placeholder="Par exemple : Pauline" required />
 					</div>
 					<div class="form-group">
-						<label>
-							Adresse email
-						</label>
-						<input id="email" class="form-control" type="email" required />
+						<label for="email" >Adresse email</label>
+						<input type="email" name="email" id="email" class="form-control" placeholder="Par exemple: paulinemartin@gmail.com" required />
 					</div>
 					<div class="form-group">
-						<label>
-							Comment nous avez-vous connus ?
-						</label>
-						<input class="form-control" type="email" required id="input_504" />
+                        <label for="media">Comment avez-vous connu notre agence de webdesign ?</label><br/>
+                        <select name="media" class="form-control" id="input_504">
+                            <option value="Recherche Google">Recherche Google</option>
+                            <option value="Blog">Blog</option>
+                            <option value="Bouche à oreille">Bouche à oreille</option>
+                            <option value="Presse spécialisée">Presse spécialisée</option>
+                            <option value="Autre">Autre</option> 
+                        </select> 
 					</div>
 					<div class="form-group">
-						<label>
-							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						<label for="message">Brief de votre projet</label><br>
+                        <textarea name="message" id="message" class="form-control" rows="4" cols="50" required placeholder="Ajoutez autant de détails que nécessaire !"></textarea>
 					</div> 
 					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
-						Envoyer le formulaire
+						Envoyer ces informations
 					</button>
 				</form>
 			</div>
