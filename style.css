@@ -872,7 +872,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -1102,7 +1102,9 @@ h4 {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    margin-left: 30px;
 }
+
 .listeliens h3 {
     color: #000!important;
     font-size: 0.9em;
@@ -1182,4 +1184,88 @@ h4 {
 label {
     font-weight: bold;
 }
-   
+
+/* Media queries ajoutées après modifications SEO pour optimiser la responsivité */
+
+@media (min-width: 320px) and (max-width: 1204px) {
+    .liens {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .liste-reseaux {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    #bloc-2-services h2 {
+        margin-bottom: 0!important;
+        width: 90%;
+    }
+    #bloc-4-portfolio h2 {
+        width: 90%;
+        margin-left: 20px!important;
+        margin-bottom: 40px!important;
+    }
+    #bloc-3-what-i-do h2 {
+        width: 100%;
+        margin-left: 0!important;
+        margin-right: -60px!important;
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    #bloc-3-what-i-do p {
+        font-size: 1em;
+    }
+    #bloc-4-portfolio img {
+        margin: auto;
+    }
+    main, #bloc-2-services {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    blockquote p:nth-child(1) {
+    font-size: 1.2em;
+    }
+    #bloc-4-portfolio h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px!important;
+    }
+    #bloc-4-portfolio p {
+        margin-bottom: 20px!important;
+    }
+    .portfolio-row {
+        margin-bottom: 0!important;
+        margin-top: 0!important;
+    }
+    #bloc-5-cta h2 {
+        width: 80%;
+        top: 30%;
+        left: 10%;
+    }
+    #bloc-5-cta .btn {
+        margin-top: 200px;
+    }
+    /*Page 2*/
+    #bloc-6 h1 {
+        font-size: 1.9em;
+    }
+    #bloc-6 h2 {
+        font-size: 1.4em!important;
+    }
+    form {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 600px) {
+    .liens {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+}
